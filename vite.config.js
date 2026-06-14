@@ -12,7 +12,8 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, "index.html"),
         chiemgau: resolve(__dirname, "artikel/chiemgau-webdesign.html"),
-        seo: resolve(__dirname, "artikel/seo-traunstein.html"),
+        seoTS: resolve(__dirname, "artikel/seo-traunstein.html"),
+        lokalSeo: resolve(__dirname, "artikel/lokales-seo.html"),
         faq: resolve(__dirname, "artikel/faq.html"),
         kosten: resolve(__dirname, "artikel/website-kosten.html"),
       },

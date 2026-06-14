@@ -1,19 +1,18 @@
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
+// vite.config.js
+import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
-  plugins: [tailwindcss()],
   build: {
+    outDir: "docs",
     rollupOptions: {
       input: {
-        main: 'index.html',
-        chiemgau: 'artikel/chiemgau-webdesign.html',
-        seo: 'artikel/seo-traunstein.html',
-        kosten: 'artikel/website-kosten.html',
-        lokal: 'artikel/lokales-seo.html',
-        faq: 'artikel/faq.html',
+        main: resolve(__dirname, "index.html"),
+        chiemgau: resolve(__dirname, "artikel/chiemgau-webdesign.html"),
+        seo: resolve(__dirname, "artikel/seo-traunstein.html"),
+        faq: resolve(__dirname, "artikel/faq.html"),
+        kosten: resolve(__dirname, "artikel/website-kosten.html"),
       },
     },
   },
-  build: { outDir: "docs" }
-})
+});
